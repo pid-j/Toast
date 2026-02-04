@@ -1,0 +1,10 @@
+[
+  {
+    "name": "App Name",
+    "description": "App Description",
+    "icon": "https://example.com/whatever.png",
+    "id": "app_name",
+    "creator": "@username",
+    "dateofcreation": "1st of Jan. 1970"
+  }
+]
