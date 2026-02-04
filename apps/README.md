@@ -12,8 +12,8 @@ Apps are put in this folder in the `.sprite3` format.
 The `store.json` file is important as this file allows the store to know where the apps are located. Each entry in this file
 corresponds to a store app/package. The format for the entry of a standalone app is ```
 {
-  "name": "Package Name Here",
-  "description": "Package Description Here",
+  "name": "App Name Here",
+  "description": "App Description Here",
   "icon": "https://example.com/whatever.png",
   "id": "{app_id}",
   "creator": "@AddUsernameHere",
@@ -27,7 +27,7 @@ This means that the format for the entry of a package is ```
   "name": "Package Name Here",
   "description": "Package Description Here",
   "icon": "https://example.com/whatever.png",
-  "id": "{app_id}",
+  "id": "{pkg_id}",
   "creator": "@AddUsernameHere",
   "dateofcreation": "1st of Jan. 1970",
   "apps": ["app_name.sprite3", "different_app.sprite3", "another_one.sprite3"]
