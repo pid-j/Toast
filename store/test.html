@@ -55,6 +55,7 @@
     <app-list>
     </app-list>
     <script>
+        var store;
         const appList = document.querySelector("app-list");
         const initialItem = document.querySelector("#initial-item");
         const repository = "https://pid-j.github.io/Toast"; // Change it for different repos!
@@ -71,7 +72,7 @@
             "referrer": `${repository}/apps/store.json`,
             "method": "GET",
             "mode": "cors"
-        }).then(body => {window.store = body.json()})})();
+        }).then(body => {globalThis.store = body.json()})})();
 
         console.log(store);
     </script>
