@@ -55,9 +55,17 @@
     <app-list>
     </app-list>
     <script>
-        var store = undefined;
         const appList = document.querySelector("app-list");
         const initialItem = document.querySelector("#initial-item");
+
+        const populateAppList = store => {
+            store.forEach(value => {
+                var appItem = initialItem.cloneNode(true);
+                // do something
+                appList.append(appItem)
+            });
+        }
+
         const repository = "https://pid-j.github.io/Toast"; // Change it for different repos!
         const storePromise = (async () => {return await fetch(`${repository}/apps/store.json`, {
             "credentials": "omit",
@@ -72,7 +80,7 @@
             "referrer": `${repository}/apps/store.json`,
             "method": "GET",
             "mode": "cors"
-        }).then(async value => {globalThis.store = await value.json();})})();
+        }).then(async value => {populateAppList(await value.json())})})();
     </script>
 </body>
 </html>
