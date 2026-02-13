@@ -57,7 +57,9 @@
     <script>
         const appList = document.querySelector("app-list");
         const initialItem = document.querySelector("#initial-item");
-        const repository = "https://pid-j.github.io/Toast" // Change it for different repos!
+        const repository = "https://pid-j.github.io/Toast"; // Change it for different repos!
+        let store = [];
+        
         (async () => {return await fetch(`${repository}/apps/store.json`, {
             "credentials": "omit",
             "headers": {
