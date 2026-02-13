@@ -33,6 +33,8 @@ This means that the format for the entry of a package is ```
   "apps": ["app_name.sprite3", "different_app.sprite3", "another_one.sprite3"]
 }``` 
 
+Extra keys can also be added for custom purposes, e.g. a category key.
+
 ## Standalone Apps
 
 For standalone apps, add it to this folder and use the name format `{app_id}.sprite3`. Examples: `cookie_clicker.sprite3`, `chicken_mcnugget.sprite3`.
