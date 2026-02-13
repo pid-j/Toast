@@ -58,7 +58,7 @@
         const appList = document.querySelector("app-list");
         const initialItem = document.querySelector("#initial-item");
         const repository = "https://pid-j.github.io/Toast" // Change it for different repos!
-        const store = (async () => {return await fetch(`${repository}/apps/store.json`, {
+        (async () => {return await fetch(`${repository}/apps/store.json`, {
             "credentials": "omit",
             "headers": {
                 "Accept": "*",
@@ -71,7 +71,7 @@
             "referrer": `${repository}/apps/store.json`,
             "method": "GET",
             "mode": "cors"
-        }).then(body => { return body.json() })})();
+        }).then(body => {window.store = body.json()})})();
 
         console.log(store);
     </script>
