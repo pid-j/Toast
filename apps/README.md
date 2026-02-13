@@ -35,7 +35,7 @@ This means that the format for the entry of a package is ```
 
 ## Standalone Apps
 
-For simgle apps, add it to this folder and use the name format `{app_id}.sprite3`. Examples: `cookie_clicker.sprite3`, `chicken_mcnugget.sprite3`.
+For standalone apps, add it to this folder and use the name format `{app_id}.sprite3`. Examples: `cookie_clicker.sprite3`, `chicken_mcnugget.sprite3`.
 
 ## Packaged Apps
 
