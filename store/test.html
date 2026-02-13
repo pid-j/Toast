@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example Test App</title>
+    <style>
+        html, head, body {
+            width: 100vw;
+            height: 100vh;
+            background: #404040;
+            margin: 0;
+            padding: 0;
+        }
+
+        app-list {
+            width: 90%;
+            height: fit-content;
+            background: #606060;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 32px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 2.5vh;
+            padding-top: 5%;
+            padding-bottom: 5%;
+            flex-direction: column;
+            border-radius: 10vw;
+        }
+
+        app-list[compact] {
+            min-height: 10%;
+            gap: 1.25vh
+        }
+
+        app-list > app-item {
+            width: 90%;
+            height: 10vh;
+            background: #202020;
+            display: inline;
+            border-radius: 5vw;
+        }
+
+        app-list[compact] > app-item {
+            height: 5vh;
+        }
+
+        app-item { display: none }
+    </style>
+    <app-item id="initial-item"></app-item>
+</head>
+<body>
+    <app-list>
+    </app-list>
+    <script>
+        const appList = document.querySelector("app-list");
+        const initialItem = document.querySelector("#initial-item");
+        const repository = "https://raw.githubusercontent.com/pid-j/Toast/refs/heads/main" // Change it for different repos!
+        const store = (async () => {return await fetch(`${repository}/apps/store.json`, {
+            "credentials": "omit",
+            "headers": {
+                "Accept": "*",
+                "Upgrade-Insecure-Requests": "1",
+                "Sec-Fetch-Dest": "document",
+                "Sec-Fetch-Mode": "navigate",
+                "Sec-Fetch-Site": "cross-site",
+                "Priority": "u=0, i"
+            },
+            "referrer": `${repository}/apps/store.json`,
+            "method": "GET",
+            "mode": "cors"
+        })})();
+
+        console.log(store);
+    </script>
+</body>
+</html>
