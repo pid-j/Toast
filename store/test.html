@@ -72,7 +72,7 @@
             "referrer": `${repository}/apps/store.json`,
             "method": "GET",
             "mode": "cors"
-        }).then(value => {globalThis.store = value;})})();
+        }).then(async value => {globalThis.store = await value.json();})})();
     </script>
 </body>
 </html>
