@@ -10,7 +10,7 @@ Apps are put in this folder in the `.sprite3` format.
 ## Store Directory
 
 The `store.json` file is important as this file allows the store to know where the apps are located. Each entry in this file
-corresponds to a store app/package. The format for the entry of a standalone app is ```
+corresponds to a store app/package, and a sample file is provided in the folder. The format for the entry of a standalone app is ```
 {
   "name": "App Name Here",
   "description": "App Description Here",
