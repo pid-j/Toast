@@ -108,15 +108,15 @@
         const populateAppList = store => {
             store.forEach(value => {
                 var appItem = initialItem.cloneNode(true);
+                let creation = value.hasOwnProperty("creation") | value.hasOwnProperty("dateofcreation")
 
                 if (value.hasOwnProperty("icon")) appItem.querySelector("img").src = value["icon"];
                 if (value.hasOwnProperty("name")) appItem.querySelector(".title").innerText = value["name"];
-                if (value.hasOwnProperty("creation") | value.hasOwnProperty("description") |
-                    value.hasOwnProperty("dateofcreation"))
+                if (creation | value.hasOwnProperty("description"))
                         appItem.querySelector(".subtitle").innerText =
-                            value.hasOwnProperty("description") ? value["description"] + "\n" : "" +
-                            `Created ${value.hasOwnProperty("dateofcreation") ? "by " + value["creator"] : ""}` +
-                            value.hasOwnProperty("dateofcreation") ? `on ${value["dateofcreation"]}` : "";
+                            (value.hasOwnProperty("description") ? value["description"] : "") +
+                            creation ? (`\nCreated ${value.hasOwnProperty("dateofcreation") ? "by " + value["creator"] : ""}` +
+                            value.hasOwnProperty("dateofcreation") ? `on ${value["dateofcreation"]}` : "") : "";
                 appList.append(appItem);
             });
         }
