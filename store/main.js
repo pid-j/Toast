@@ -21,7 +21,7 @@ const populateAppList = store => {
         if (dateoc) appItem.querySelector(".subtitle").innerText += `on ${value["dateofcreation"]}`;
         
         appItem.addEventListener("click", e => window.parent.postMessage(
-            `ToastDownload-${value["id"]}`));
+            `ToastDownload-${value.hasOwnProperty("apps") ? "pkg" : "app"}:${value["id"]}`));
 
         appList.append(appItem);
     });
