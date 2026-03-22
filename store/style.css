@@ -1,0 +1,86 @@
+html, head, body {
+    width: 100vw;
+    height: 100vh;
+    background: #404040;
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-family: Roboto, Arial, Helvetica, sans-serif, monospace;
+}
+
+app-list {
+    width: 90%;
+    height: fit-content;
+    background: #606060;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 32px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2.5vh;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    flex-direction: column;
+    border-radius: 10vw;
+}
+
+app-list[compact=true] {
+    min-height: 10%;
+    gap: 1.25vh
+}
+
+app-list > app-item {
+    width: 90%;
+    height: 10vh;
+    background: #202020;
+    display: flex;
+    border-radius: 5vw;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 5%;
+    transition: ease-in-out background 0.2s;
+}
+
+app-list > app-item:hover {
+    background: #404040;
+}
+
+app-list[compact=true] > app-item {
+    height: 5vh;
+}
+
+app-list img {
+    width: min(7.5vh, 50%);
+    aspect-ratio: 1;
+}
+
+app-list[compact=true] img {
+    width: min(2.5vh, 50%);
+}
+
+app-item > .titlebox {
+    height: 75%;
+    width: 75%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.titlebox > .title {
+    max-height: 75%;
+    width: 100%;
+    font-weight: bold;
+    font-size: 75%;
+}
+
+.titlebox > .subtitle {
+    min-height: 25%;
+    height: fit-content;
+    width: 100%;
+    font-size: 50%;
+}
+    
+app-item { display: none }
