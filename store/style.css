@@ -18,21 +18,20 @@ app-list {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    gap: 2.5vh;
-    padding-top: 5%;
-    padding-bottom: 5%;
+    gap: 3vh;
+    padding-top: 7.5%;
+    padding-bottom: 7.5%;
     flex-direction: column;
-    border-radius: 10vw;
 }
 
 app-list[compact=true] {
-    min-height: 10%;
-    gap: 1.25vh
+    min-height: 15%;
+    gap: 1.5vh;
 }
 
 app-list > app-item {
     width: 90%;
-    height: 10vh;
+    height: 15vh;
     background: #202020;
     display: flex;
     border-radius: 5vw;
@@ -48,7 +47,7 @@ app-list > app-item:hover {
 }
 
 app-list[compact=true] > app-item {
-    height: 5vh;
+    height: 7.5vh;
 }
 
 app-list img {
