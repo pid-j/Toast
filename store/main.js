@@ -1,9 +1,6 @@
 const appList = document.querySelector("app-list");
 const initialItem = document.querySelector("app-item");
 
-const toggleCompactMode = () => appList.setAttribute("compact", 
-    appList.getAttribute("compact") == "true" ? "false": "true");
-
 const populateAppList = store => {
     store.forEach(value => {
         if (!value.hasOwnProperty("id")) return;

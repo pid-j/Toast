@@ -23,13 +23,9 @@ app-list {
     flex-direction: column;
 }
 
-app-list[compact=true] {
-    gap: 1.5vh;
-}
-
 app-list > app-item {
     width: 90%;
-    height: 15vh;
+    height: 20vh;
     background: #202020;
     display: flex;
     border-radius: 2.5vw;
@@ -44,17 +40,9 @@ app-list > app-item:hover {
     background: #404040;
 }
 
-app-list[compact=true] > app-item {
-    height: 7.5vh;
-}
-
 app-list img {
-    width: min(7.5vh, 50%);
+    width: min(15vh, 50%);
     aspect-ratio: 1;
-}
-
-app-list[compact=true] img {
-    width: min(2.5vh, 50%);
 }
 
 app-item > .titlebox {
