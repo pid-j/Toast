@@ -20,8 +20,8 @@ const populateAppList = store => {
         if (creator) appItem.querySelector(".subtitle").innerText += `by ${value["creator"]} `;
         if (dateoc) appItem.querySelector(".subtitle").innerText += `on ${value["dateofcreation"]}`;
         
-        appItem.addEventListener("click", e => window.parent.postMessage(
-            `ToastDownload-${value.hasOwnProperty("apps") ? "pkg" : "app"}:${value["id"]}`));
+        appItem.addEventListener("click", e => {window.parent.postMessage(
+            `ToastDownload-${value.hasOwnProperty("apps") ? "pkg" : "app"}:${value["id"]}`, "*")});
 
         appList.append(appItem);
     });
