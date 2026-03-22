@@ -10,7 +10,7 @@ html, head, body {
 }
 
 app-list {
-    width: 100%;
+    width: min(480px, 100%);
     min-height: 100%;
     background: #606060;
     margin: 0;
