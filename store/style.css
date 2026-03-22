@@ -11,8 +11,8 @@ html, head, body {
 }
 
 app-list {
-    width: 90%;
-    height: fit-content;
+    width: 100%;
+    min-height: 100%;
     background: #606060;
     margin-left: auto;
     margin-right: auto;
@@ -27,7 +27,6 @@ app-list {
 }
 
 app-list[compact=true] {
-    min-height: 15%;
     gap: 1.5vh;
 }
 
