@@ -24,7 +24,7 @@ app-list {
 }
 
 app-list > app-item {
-    width: 90%;
+    width: min(432px, 90%);
     height: 20vh;
     background: #202020;
     display: flex;
