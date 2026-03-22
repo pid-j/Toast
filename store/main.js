@@ -19,7 +19,7 @@ const populateAppList = store => {
         if (icon) appItem.querySelector("img").src = value["icon"];
         if (_name) appItem.querySelector(".title").innerText = value["name"];
         if (desc) appItem.querySelector(".subtitle").innerText = value["description"];
-        if (creation) appItem.querySelector(".subtitle").innerText += "<br/>Created ";
+        if (creation) appItem.querySelector(".subtitle").innerText += " - Created ";
         if (creator) appItem.querySelector(".subtitle").innerText += `by ${value["creator"]} `;
         if (dateoc) appItem.querySelector(".subtitle").innerText += `on ${value["dateofcreation"]}`;
         
